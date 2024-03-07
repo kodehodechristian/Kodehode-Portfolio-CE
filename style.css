@@ -1,0 +1,359 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.background-image-container {
+  background: url("images/used/background-img-FINAL.png") no-repeat center
+    center fixed;
+  background-size: cover;
+  position: fixed; /* Fixed position to stay behind content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind the content */
+  transition: opacity 0.5s ease, filter 0.5s ease; /* Smooth transition */
+}
+
+.content-container {
+  position: relative; /* Ensure content is properly positioned */
+  z-index: 1; /* Above the background */
+  /* Add any additional styling for your content layout */
+}
+
+/* NAVBAR STYLING */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  background-image: url("images/used/Clouds_only_h150cutTOPpx.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1000;
+  width: 100vw;
+  min-height: 15vh;
+  max-height: 15vh;
+}
+
+.firstLetterNavItem {
+  color: #ff8b36;
+  text-shadow: -2px -2px 0 rgba(21, 17, 16, 0.75),
+    2px -2px 0 rgba(21, 17, 16, 0.75), -2px 2px 0 rgba(21, 17, 16, 0.75),
+    2px 2px 0 rgba(21, 17, 16, 0.75), -1px -2px 0 rgba(21, 17, 16, 0.75),
+    1px -2px 0 rgba(21, 17, 16, 0.75), -2px -1px 0 rgba(21, 17, 16, 0.75),
+    2px -1px 0 rgba(21, 17, 16, 0.75), -2px 1px 0 rgba(21, 17, 16, 0.75),
+    2px 1px 0 rgba(21, 17, 16, 0.75), -1px 2px 0 rgba(21, 17, 16, 0.75),
+    1px 2px 0 rgba(21, 17, 16, 0.75);
+}
+
+#a1,
+#a2,
+#a3,
+#a4,
+#a5 {
+  letter-spacing: 1.5px;
+  /* word-spacing: -5px; */
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 15px;
+  padding: 0 5vw;
+}
+
+.nav-links ul li:not(:first-child):not(:last-child) {
+  margin: 0 1.5vw;
+}
+
+.nav-links ul li {
+  display: flex;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  font-family: "Inconsolata";
+  color: #151110;
+  font-size: calc(1vw + 1em); /* Dynamic font size adjustment */
+  white-space: nowrap;
+  position: relative; /* Positioning the pseudo-element */
+  display: inline-block; /* Proper positioning of pseudo-elements */
+  transition: transform 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  transform: scale(1.1);
+}
+
+.nav-links ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  border-radius: 8px;
+  background: #ff8b36;
+  transition: width 0.3s;
+  bottom: 5px;
+  left: 0;
+}
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+
+/* NAVBAR MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .nav-links ul li a {
+    font-size: calc(0.8vw + 1em);
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links ul li a {
+    font-size: calc(0.5vw + 1em);
+  }
+}
+
+/* SECTION 1 / Landing page */
+
+#section1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto; /* Centers the container */
+  max-width: 1920px;
+}
+
+section > div {
+  position: relative;
+}
+/* CURVED TEXT */
+
+.responsive-image {
+  position: absolute; /* Positions the image absolutely within its relative parent */
+  bottom: 45%; /* Aligns the image to the top of the container */
+  width: 40%; /* Makes the image width responsive to the container's width */
+  height: auto; /* Maintains the aspect ratio of the image */
+  max-width: 100%; /* Ensures the image does not overflow its container */
+  min-width: 460px;
+}
+
+/* BOTTOM TEXT */
+
+#bottomText {
+  white-space: nowrap;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#bottomText p {
+  color: #eacc86;
+  text-align: center;
+  /* Simulate stroke using text-shadow */
+  text-shadow: -2px -2px 0 rgba(21, 17, 16, 0.75),
+    2px -2px 0 rgba(21, 17, 16, 0.75), -2px 2px 0 rgba(21, 17, 16, 0.75),
+    2px 2px 0 rgba(21, 17, 16, 0.75), -1px -2px 0 rgba(21, 17, 16, 0.75),
+    1px -2px 0 rgba(21, 17, 16, 0.75), -2px -1px 0 rgba(21, 17, 16, 0.75),
+    2px -1px 0 rgba(21, 17, 16, 0.75), -2px 1px 0 rgba(21, 17, 16, 0.75),
+    2px 1px 0 rgba(21, 17, 16, 0.75), -1px 2px 0 rgba(21, 17, 16, 0.75),
+    1px 2px 0 rgba(21, 17, 16, 0.75);
+  font-family: "Just Another Hand";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.special-letter {
+  color: #eacc86;
+  font-family: "Lobster Two";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* MEDIA QUERIES BOTTOMTEXT */
+
+@media (max-width: 768px) {
+  #bottomText p,
+  .special-letter {
+    font-size: calc(50px + 4vw);
+  }
+}
+
+@media (max-width: 560px) {
+  #bottomText p,
+  .special-letter {
+    font-size: calc(25px + 4vw);
+  }
+}
+
+/* SECTION TWO - ABOUT ME */
+
+#section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto; /* Centers the container */
+  max-width: 1920px;
+}
+
+section > div {
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* 1/3 and 2/3 division */
+  height: 100%; /* Adjust this to fit your needs */
+}
+
+.first-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.second-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr; /* Equal division */
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.right-side {
+  font-family: "Inconsolata";
+  font-size: 25px;
+  color: #f0e2d5;
+}
+
+.title-container {
+  display: inline-block; /* Shrink to fit the content */
+  position: relative; /* Establish a positioning context */
+  text-align: center; /* Center the content */
+}
+
+.title-container h2 {
+  font-family: "Inconsolata";
+  font-size: 80px;
+  margin: 0 auto; /* Center the h2 horizontally */
+  /* Ensure there is no default margin to disrupt the layout */
+}
+
+#underlineSection2 {
+  width: 100%; /* Make the underline match the parent's width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline characteristics */
+  position: absolute; /* Position it relative to its parent */
+  bottom: 0; /* Align it to the bottom of the title container */
+}
+
+.left-side h2 {
+  font-family: "Inconsolata";
+  font-size: 40px;
+}
+
+#myPicture {
+  max-width: 100%; /* Ensure image does not overflow its container */
+  height: auto;
+  width: 50%;
+}
+
+/* SECTION 3 / Skills */
+
+#section3 {
+}
+
+#referenceFrame2 {
+  display: inline-flex;
+  padding: 23px 0px 1.146px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 71px;
+}
+
+#heading1 {
+  width: 677px;
+  height: 122.57px;
+}
+
+#skillsetCircle {
+  width: 609.347px;
+  height: 585.544px;
+}
+
+/* SECTION 4 / PROJECTS */
+
+#section4 {
+}
+
+#referenceFrame3 {
+  display: inline-flex;
+  padding-top: 74px;
+  flex-direction: column;
+  align-items: center;
+  gap: 65px;
+}
+
+#heading2 {
+  width: 1010.181px;
+  height: 113.128px;
+}
+
+#projectFrame {
+  display: flex;
+  padding: 30.293px 38.259px 29.792px 30.293px;
+  align-items: center;
+}
+
+/* SECTION 5 / CONTACT ME */
+
+#section5 {
+}
+
+#referenceFrame4 {
+  display: inline-flex;
+  padding-top: 35px;
+  flex-direction: column;
+  align-items: center;
+  gap: 87px;
+}
+
+#heading3 {
+  width: 1082.725px;
+  height: 119.168px;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

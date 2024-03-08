@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         backgroundContainer.classList.add("darkened");
         backgroundContainer.style.filter = "blur(10px)";
-        backgroundContainer.style.background = `black, url("images/used/background-img-FINAL.png") 1%`;
       }
     });
   });
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     navLinks.forEach((a) => {
-      a.classList.remove("active"); // Assume 'active' class adds the underline or other styling
+      a.classList.remove("active");
       if (a.href.includes(currentSectionId)) {
         a.classList.add("active");
       }

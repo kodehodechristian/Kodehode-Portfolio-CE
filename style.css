@@ -393,23 +393,24 @@ html {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-end;
+  min-height: 100vh; /* Changed from height to min-height */
   width: 100vw;
-  margin: 0 auto; /* Centers the container */
+  margin: 0 auto;
   max-width: 1920px;
 }
 
-#grid-container2 {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+#wrapper1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vh;
+  padding-bottom: 2.5vw;
 }
 
 #heading2 {
-  grid-area: 1 / 3 / 2 / 8;
   display: inline-block; /* Shrink to fit the content */
   position: relative; /* Establish a positioning context */
   text-align: center; /* Center the content */
@@ -417,7 +418,11 @@ html {
 
 #heading2 h2 {
   font-family: "Inconsolata";
-  font-size: calc(3vw + 1vh);
+  font-size: clamp(
+    90px,
+    calc(3vw + 1vh),
+    110px
+  ); /* Ensures font size is never below 18px or above 32px */
   margin: 0; /* Adjusted to ensure the underline aligns tightly */
   text-shadow: 5px 5px 3px rgba(21, 17, 16, 0.5);
   position: relative; /* To position the pseudo-element */
@@ -437,37 +442,49 @@ html {
 
 /* SKILL CIRCLE */
 
-#problem-solving {
-  grid-area: 2 / 5 / 3 / 6;
-  background: url("images/3_skills/Brain.png") no-repeat center / cover;
+#grid-container2 {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1vw;
 }
-#css {
-  grid-area: 3 / 6 / 4 / 7;
-  background: url("images/3_skills/CSS.png") no-repeat center / cover;
+
+/* GRID ITEMS */
+
+#problem-solving {
+  grid-area: 1 / 5 / 2 / 8;
+  background: url("images/3_skills/Brain.png") no-repeat center / contain;
 }
 #chatgpt {
-  grid-area: 4 / 7 / 5 / 8;
-  background: url("images/3_skills/ChatGPT.png") no-repeat center / cover;
+  grid-area: 2 / 7 / 3 / 10;
+  background: url("images/3_skills/ChatGPT.png") no-repeat center / contain;
+}
+#css {
+  grid-area: 3 / 9 / 4 / 12;
+  background: url("images/3_skills/CSS.png") no-repeat center / contain;
 }
 #react {
-  grid-area: 5 / 6 / 6 / 7;
-  background: url("images/3_skills/React.png") no-repeat center / cover;
+  grid-area: 4 / 7 / 5 / 10;
+  background: url("images/3_skills/React.png") no-repeat center / contain;
 }
 #python {
-  grid-area: 6 / 5 / 6 / 7;
-  background: url("images/3_skills/Python.png") no-repeat center / cover;
+  grid-area: 5 / 5 / 6 / 8;
+  background: url("images/3_skills/Python.png") no-repeat center / contain;
 }
 #figma {
-  grid-area: 5 / 4 / 6 / 5;
-  background: url("images/3_skills/Figma.png") no-repeat center / cover;
-}
-#javascript {
-  grid-area: 4 / 3 / 5 / 4;
-  background: url("images/3_skills/JavaScript.png") no-repeat center / cover;
+  grid-area: 4 / 3 / 5 / 6;
+  background: url("images/3_skills/Figma.png") no-repeat center / contain;
 }
 #html {
-  grid-area: 3 / 4 / 4 / 5;
-  background: url("images/3_skills/HTML.png") no-repeat center / cover;
+  grid-area: 3 / 1 / 4 / 4;
+  background: url("images/3_skills/HTML.png") no-repeat center / contain;
+}
+#javascript {
+  grid-area: 2 / 3 / 3 / 6;
+  background: url("images/3_skills/JavaScript.png") no-repeat center / contain;
 }
 
 #problem-solving,
@@ -478,9 +495,27 @@ html {
 #figma,
 #javascript,
 #html {
-  border: 1px solid red; /* Temporary border for visibility */
-  height: auto;
-  width: 100%;
+  height: 12vh;
+  width: 10vw;
+  min-width: 80px;
+}
+
+.overlay {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #f0e2d5;
+  color: #151110;
+  font-family: "Inconsolata";
+  font-weight: 500;
+  padding: 20px;
+  margin: 0, auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Example shadow for visibility */
+  z-index: 100; /* High z-index to be on top */
+  /* Adjust left, top, and transform as necessary to center it */
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
 /* SECTION 4 / PROJECTS */
@@ -497,12 +532,14 @@ html {
   max-width: 1920px;
 }
 
-#referenceFrame3 {
-  display: inline-flex;
-  padding-top: 74px;
+#wrapper2 {
+  position: relative;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 65px;
+  gap: 4vh;
+  padding-bottom: 5vw;
 }
 
 .heading3 {
@@ -533,8 +570,19 @@ html {
 
 #projectFrame {
   display: flex;
-  padding: 30.293px 38.259px 29.792px 30.293px;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+#project1 {
+}
+
+#project2 {
+}
+
+#project3 {
+}
+
+#project4 {
 }
 
 /* SECTION 5 / CONTACT ME */
@@ -551,12 +599,14 @@ html {
   max-width: 1920px;
 }
 
-#content-wrapper-frame4 {
-  display: inline-flex;
-  padding-top: 35px;
+#wrapper3 {
+  position: relative;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 87px;
+  gap: 4vh;
+  padding-bottom: 2.5vw;
 }
 
 .heading4 {
@@ -578,15 +628,19 @@ html {
   display: block;
   width: 100%;
   height: 1.5vh; /* Height of the underline */
-  background: url("images/2_about_me/Underline_about_me.png") no-repeat center /
+  background: url("images/5_contact/Underline_contact.png") no-repeat center /
     cover;
   position: absolute;
   bottom: -3px;
   z-index: -1;
 }
 
-#contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#epost-logo {
+
 }
+
+#epost {
+
+}
+
+

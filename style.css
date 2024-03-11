@@ -14,13 +14,13 @@ html {
   background: url("images/0_navbar_&_background/background-img-FINAL.png")
     no-repeat center center fixed;
   background-size: cover;
-  position: fixed; /* Fixed position to stay behind content */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure it stays behind the content */
-  transition: opacity 0.5s ease, filter 0.5s ease; /* Smooth transition */
+  z-index: -1;
+  transition: opacity 0.5s ease, filter 0.5s ease;
 }
 .background-image-container::after {
   content: "";
@@ -29,11 +29,11 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay; adjust opacity as needed */
-  z-index: 1; /* Ensure it's above the background image */
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
   transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
-  pointer-events: none; /* Prevent the overlay from interfering with clicks */
-  opacity: 0; /* Make overlay invisible by default */
+  pointer-events: none;
+  opacity: 0;
 }
 
 .background-image-container.darkened::after {
@@ -41,9 +41,8 @@ html {
 }
 
 .content-container {
-  position: relative; /* Ensure content is properly positioned */
-  z-index: 2; /* Above the background */
-  /* Add any additional styling for your content layout */
+  position: relative;
+  z-index: 2;
 }
 
 /* NAVBAR STYLING */
@@ -95,10 +94,10 @@ html {
   font-family: "Inconsolata";
   font-weight: bold;
   color: #151110;
-  font-size: calc(1vw + 1em); /* Dynamic font size adjustment */
+  font-size: calc(1vw + 1em);
   white-space: nowrap;
-  position: relative; /* Positioning the pseudo-element */
-  display: inline-block; /* Proper positioning of pseudo-elements */
+  position: relative;
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
@@ -166,18 +165,18 @@ html {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  margin: 0 auto; /* Centers the container */
+  margin: 0 auto;
   max-width: 1920px;
 }
 
 /* CURVED TEXT */
 
 .responsive-image {
-  position: absolute; /* Positions the image absolutely within its relative parent */
-  bottom: 45%; /* Aligns the image to the top of the container */
-  width: 45%; /* Makes the image width responsive to the container's width */
-  height: auto; /* Maintains the aspect ratio of the image */
-  max-width: 100%; /* Ensures the image does not overflow its container */
+  position: absolute;
+  bottom: 45%;
+  width: 45%;
+  height: auto;
+  max-width: 100%;
   min-width: 250px;
 }
 
@@ -186,13 +185,12 @@ html {
 #bottomText {
   white-space: nowrap;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 #bottomText p {
   color: #eacc86;
   text-align: center;
-  /* Simulate stroke using text-shadow */
   text-shadow: 3px -3px 3px rgba(21, 17, 16, 0.5);
   font-family: "Just Another Hand";
   font-size: 100px;
@@ -242,7 +240,7 @@ html {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  margin: 0 auto; /* Centers the container */
+  margin: 0 auto;
   max-width: 1920px;
 }
 
@@ -258,33 +256,33 @@ html {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 0.5fr 2fr; /* Maintain the ratio between rows */
+  grid-template-rows: 0.5fr 2fr;
   gap: calc(1vh + 0.9vw);
-  position: relative; /* Keep relative to ensure it moves with the content */
-  width: 100vw; /* Adjust the width to be relative to the viewport width */
-  height: 85vh; /* Let height adjust based on content, or set a vh value */
+  position: relative;
+  width: 100vw;
+  height: 85vh;
   padding-bottom: 10px;
 }
 
 .heading1 {
-  display: inline-block; /* Shrink to fit the content */
-  position: relative; /* Establish a positioning context */
-  text-align: center; /* Center the content */
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
 .heading1 h2 {
   font-family: "Inconsolata";
   font-size: calc(3.5vw + 2vh);
-  margin: 0; /* Adjusted to ensure the underline aligns tightly */
+  margin: 0;
   text-shadow: 5px 5px 3px rgba(21, 17, 16, 0.5);
-  position: relative; /* To position the pseudo-element */
+  position: relative;
 }
 
 .heading1 h2::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1.5vh; /* Height of the underline */
+  height: 1.5vh;
   background: url("images/2_about_me/Underline_about_me.png") no-repeat center /
     cover;
   position: absolute;
@@ -310,7 +308,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3vh; /* Adjust the gap size based on viewport height */
+  gap: 3vh;
   min-width: 100px;
   margin: auto;
 }
@@ -323,7 +321,7 @@ html {
 }
 
 #myPicture {
-  max-width: 350px; /* Ensure image does not overflow its container */
+  max-width: 350px;
   height: auto;
   width: 80%;
   margin: auto;
@@ -348,8 +346,8 @@ html {
 
 @media (max-width: 768px) {
   .grid-container {
-    gap: 1vh; /* Dynamic gap based on viewport height */
-    height: 85vh; /* Let height adjust based on content, or set a vh value */
+    gap: 1vh;
+    height: 85vh;
     padding-bottom: 40px;
   }
 
@@ -360,13 +358,13 @@ html {
   .second-row {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the items horizontally */
+    align-items: center;
   }
 
   .left-side,
   .right-side {
-    width: 100%; /* Make each child take the full width */
-    max-width: none; /* Override any max-width set */
+    width: 100%;
+    max-width: none;
   }
 
   .left-side h2 {
@@ -374,7 +372,7 @@ html {
   }
 
   #myPicture {
-    max-width: 350px; /* Ensure image does not overflow its container */
+    max-width: 350px;
     height: auto;
     width: 40%;
     margin: auto;
@@ -394,7 +392,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  min-height: 100vh; /* Changed from height to min-height */
+  min-height: 100vh;
   width: 100vw;
   margin: 0 auto;
   max-width: 1920px;
@@ -411,28 +409,24 @@ html {
 }
 
 #heading2 {
-  display: inline-block; /* Shrink to fit the content */
-  position: relative; /* Establish a positioning context */
-  text-align: center; /* Center the content */
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
 #heading2 h2 {
   font-family: "Inconsolata";
-  font-size: clamp(
-    90px,
-    calc(3vw + 1vh),
-    110px
-  ); /* Ensures font size is never below 18px or above 32px */
-  margin: 0; /* Adjusted to ensure the underline aligns tightly */
+  font-size: clamp(70px, calc(3vw + 1vh), 110px);
+  margin: 0;
   text-shadow: 5px 5px 3px rgba(21, 17, 16, 0.5);
-  position: relative; /* To position the pseudo-element */
+  position: relative;
 }
 
 #heading2 h2::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1.5vh; /* Height of the underline */
+  height: 1.5vh;
   background: url("images/3_skills/Underline_skills.png") no-repeat center /
     cover;
   position: absolute;
@@ -501,7 +495,7 @@ html {
 }
 
 .overlay {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
   background-color: #f0e2d5;
   color: #151110;
@@ -510,12 +504,25 @@ html {
   padding: 20px;
   margin: 0, auto;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Example shadow for visibility */
-  z-index: 100; /* High z-index to be on top */
-  /* Adjust left, top, and transform as necessary to center it */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  z-index: 100;
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+  #wrapper1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+    margin-bottom: 40px;
+  }
 }
 
 /* SECTION 4 / PROJECTS */
@@ -524,11 +531,11 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  margin: 0 auto; /* Centers the container */
+  margin: 0 auto;
   max-width: 1920px;
 }
 
@@ -542,47 +549,98 @@ html {
   padding-bottom: 5vw;
 }
 
-.heading3 {
-  display: inline-block; /* Shrink to fit the content */
-  position: relative; /* Establish a positioning context */
-  text-align: center; /* Center the content */
+#heading3 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
-.heading3 h2 {
+#heading3 h2 {
   font-family: "Inconsolata";
-  font-size: calc(3vw + 1vh);
-  margin: 0; /* Adjusted to ensure the underline aligns tightly */
+  font-size: clamp(40px, calc(3vw + 1vh), 120px);
+  margin: 0;
   text-shadow: 5px 5px 3px rgba(21, 17, 16, 0.5);
-  position: relative; /* To position the pseudo-element */
+  position: relative;
 }
 
-.heading3 h2::after {
+#heading3 h2::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1.5vh; /* Height of the underline */
-  background: url("images/2_about_me/Underline_about_me.png") no-repeat center /
-    cover;
+  height: 1.5vh;
+  background: url("images/4_projects/Underline_my_projects.png") no-repeat
+    center / cover;
   position: absolute;
   bottom: -3px;
   z-index: -1;
 }
 
-#projectFrame {
-  display: flex;
-  flex-wrap: wrap;
+#grid-container3 {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: start; /* align-items set to start for better control over item alignment */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(
+    2,
+    minmax(150px, 300px)
+  ); /* Use minmax for more flexible row heights */
+  gap: 1vw;
 }
 
 #project1 {
+  background: url("images/4_projects/RPG_initiative.png") no-repeat center /
+    cover;
+  cursor: pointer;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 #project2 {
+  background: url("images/4_projects/Bless_you.png") no-repeat center / cover;
+  cursor: pointer;
+  grid-area: 1 / 2 / 2 /3;
 }
 
 #project3 {
+  background: url("images/4_projects/Drum_machine.png") no-repeat center / cover;
+  cursor: pointer;
+  grid-area: 2 / 1 /3 /2;
 }
 
 #project4 {
+  background: url("images/4_projects/The_square_game.png") no-repeat center /
+    cover;
+  cursor: pointer;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#project1,
+#project2,
+#project3,
+#project4 {
+  min-height: 15vh;
+  width: 20vw;
+  height: 15vh;
+  min-width: 80px;
+  border-radius: 8px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+  #grid-container3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 3px;
+    justify-items: center;
+  }
+  #project1,
+  #project2,
+  #project3,
+  #project4 {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 
 /* SECTION 5 / CONTACT ME */
@@ -595,7 +653,7 @@ html {
   align-items: center;
   height: 80vh;
   width: 100vw;
-  margin: 0 auto; /* Centers the container */
+  margin: 0 auto;
   max-width: 1920px;
 }
 
@@ -609,24 +667,24 @@ html {
 }
 
 #heading4 {
-  display: inline-block; /* Shrink to fit the content */
-  position: relative; /* Establish a positioning context */
-  text-align: center; /* Center the content */
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
 #heading4 h2 {
   font-family: "Inconsolata";
   font-size: clamp(40px, calc(3vw + 1vh), 120px);
-  margin: 0; /* Adjusted to ensure the underline aligns tightly */
+  margin: 0;
   text-shadow: 5px 5px 3px rgba(21, 17, 16, 0.5);
-  position: relative; /* To position the pseudo-element */
+  position: relative;
 }
 
 #heading4 h2::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1.5vh; /* Height of the underline */
+  height: 1.5vh;
   background: url("images/5_contact/Underline_contact.png") no-repeat center /
     cover;
   position: absolute;
@@ -634,7 +692,7 @@ html {
   z-index: -1;
 }
 
-/* SKILL CIRCLE */
+/* CONTACT GRID */
 
 #grid-container4 {
   position: relative;
@@ -705,19 +763,17 @@ html {
 #cv-pdf-logo {
   height: 12vh;
   width: 10vw;
-  min-width: 80px;
+  min-width: 50px;
 }
 
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
-  /* or any other breakpoint */
   #grid-container4 {
-    /* Switch to a single column layout */
     grid-template-columns: 1fr;
-    grid-template-rows: auto; /* Adjust based on content */
-    gap: 5px;
-    justify-items: center; /* Horizontally center items in the grid */
+    grid-template-rows: auto;
+    gap: 3px;
+    justify-items: center;
   }
   #epost-logo,
   #epost,
@@ -727,7 +783,7 @@ html {
   #git-logo,
   #hub,
   #cv-pdf-logo {
-    grid-column: 1; /* Place all items in the first column */
-    grid-row: auto; /* Let items flow naturally */
+    grid-column: 1;
+    grid-row: auto;
   }
 }

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const navLinks = document.querySelectorAll(".nav-links a");
   const sections = document.querySelectorAll("section");
+
   const overlayTexts = {
     "problem-solving":
       "My ability to solve whatever problem gets thrown at me.",
@@ -73,4 +74,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Attach the scroll event listener
   window.addEventListener("scroll", updateActiveNavLinkOnScroll);
+});
+
+const gitLogo = document.getElementById("git-logo");
+const cvPdfLogo = document.getElementById("cv-pdf-logo");
+
+// GitHub Page URL
+gitLogo.addEventListener("click", function () {
+  window.open("https://github.com/kodehodechristian", "_blank");
+});
+
+// Direct link to your CV PDF on GitHub
+cvPdfLogo.addEventListener("click", function () {
+  window.open("https://github.com/yourusername/yourcv.pdf", "_blank");
 });

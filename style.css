@@ -546,7 +546,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 4vh;
-  padding-bottom: 5vw;
+  padding-bottom: 3.5vw;
 }
 
 #heading3 {
@@ -631,15 +631,20 @@ html {
   #grid-container3 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 3px;
+    gap: 10px;
     justify-items: center;
   }
+
   #project1,
   #project2,
   #project3,
   #project4 {
     grid-column: 1;
     grid-row: auto;
+  }
+
+  #wrapper2 {
+    margin-top: 70px;
   }
 }
 

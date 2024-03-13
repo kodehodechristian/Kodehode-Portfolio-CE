@@ -5,22 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Khula:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Khula:wght@300;400;600;700;800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&display=swap"
       rel="stylesheet"
     />
     <title>Portfolio</title>
@@ -84,9 +71,9 @@
           <div class="first-row">
             <div class="heading1">
               <h2>
-                <span class="span-color-white"> Hi!</span>
-                <span class="span-color-orange"> Nice to meet</span>
-                <span class="span-color-white"> you!</span>
+                <span class="text-white"> Hi!</span>
+                <span class="text-orange"> Nice to meet</span>
+                <span class="text-white"> you!</span>
               </h2>
             </div>
           </div>
@@ -94,9 +81,9 @@
             <div class="left-side">
               <!-- Title and Picture -->
               <h2>
-                <span class="span-color-orange">That's</span>
-                <span class="span-color-white"> me,</span>
-                <span class="span-color-orange">Christian</span>
+                <span class="text-orange">That's</span>
+                <span class="text-white"> me,</span>
+                <span class="text-orange">Christian</span>
               </h2>
               <img
                 id="myPicture"
@@ -104,40 +91,32 @@
                 alt="Picture of me"
               />
             </div>
+            <!-- Right Side: Biography Poem -->
             <div class="right-side">
-              <!-- Just text -->
-              <div id="poem-wrapper">
-                Let's<span class="span-color-orange"> dive right into it</span
-                ><br />
+              <p class="biography-poem">
+                Let's<span class="text-orange"> dive right into it</span><br />
                 and grab your attention!<br />
                 There's some stuff<br />
                 I'd like to mention:<br /><br />
-
-                I'm <span class="span-color-orange">all about creating,</span
-                ><br />
+                I'm <span class="text-orange">all about creating,</span><br />
                 making,<br />
                 using my skills and brain.<br />
                 And when it's all done<br />
                 git commit to main!<br /><br />
-
-                <span class="span-color-orange">Interests</span>? - I
-                <span class="span-color-orange">got a few</span>!<br />
+                <span class="text-orange">Interests</span>? - I
+                <span class="text-orange">got a few</span>!<br />
                 Nature, friends, training,<br />
                 cars and code maintaining.<br />
                 You see - and this is true<br />
-                there's<br />
-                <span class="span-color-orange">always something new</span
+                there's <span class="text-orange">always something new</span
                 ><br />
                 to do.<br /><br />
-
-                A <span class="span-color-orange"> developer</span> in the
-                making,<br />
-                <span class="span-color-orange"> full-stack</span>, no slack<br />
+                A <span class="text-orange">developer</span> in the making,<br />
+                <span class="text-orange">full-stack</span>, no slack<br />
                 here for the taking.<br />
                 And with a strong desire<br />
-                to be your
-                <span class="span-color-orange"> new hire</span>!<br />
-              </div>
+                to be your<span class="text-orange"> new hire</span>!
+              </p>
             </div>
           </div>
         </div>
@@ -148,10 +127,10 @@
         <div id="wrapper1">
           <div id="heading2">
             <h2>
-              <span class="span-color-orange">Sk</span
-              ><span class="span-color-white">i</span
-              ><span class="span-color-orange">ll</span
-              ><span class="span-color-white">s</span>
+              <span class="text-orange">Sk</span
+              ><span class="text-white">i</span
+              ><span class="text-orange">ll</span
+              ><span class="text-white">s</span>
             </h2>
           </div>
           <div id="grid-container2">
@@ -174,17 +153,29 @@
         <div id="wrapper2">
           <div id="heading3">
             <h2>
-              <span class="span-color-orange">My</span
-              ><span class="span-color-white"> projects</span
-              ><span class="span-color-orange">!</span>
+              <span class="text-orange">My</span
+              ><span class="text-white"> projects</span
+              ><span class="text-orange">!</span>
             </h2>
           </div>
           <div id="grid-container3">
             <div id="overlay2"></div>
-            <div id="project1"></div>
-            <div id="project2"></div>
-            <div id="project3"></div>
-            <div id="project4"></div>
+            <div
+              id="project1"
+              data-url="https://kodehode-stavanger.github.io/user-data-assignment-kodehodechristian/"
+            ></div>
+            <div
+              id="project2"
+              data-url="https://kodehode-stavanger.github.io/javascript-advanced-project-api-kodehodechristian/"
+            ></div>
+            <div
+              id="project3"
+              data-url="https://kodehode-stavanger.github.io/javascript-advanced-project-drum-machine-kodehodechristian/"
+            ></div>
+            <div
+              id="project4"
+              data-url="https://kodehode-stavanger.github.io/javascript-basic-mini-project-kodehodechristian/"
+            ></div>
           </div>
         </div>
       </section>
@@ -194,10 +185,10 @@
         <div id="wrapper3">
           <div id="heading4">
             <h2>
-              <span class="span-color-orange">C</span
-              ><span class="span-color-white">ontact</span
-              ><span class="span-color-orange"> me</span
-              ><span class="span-color-white">:</span>
+              <span class="text-orange">C</span
+              ><span class="text-white">ontact</span
+              ><span class="text-orange"> me</span
+              ><span class="text-white">:</span>
             </h2>
           </div>
           <!-- CONTACT ME -->
@@ -207,9 +198,15 @@
             <div id="mobil-logo"></div>
             <div id="mobil">mob. 949 88 744</div>
             <div id="git">Git</div>
-            <div id="git-logo"></div>
+            <div
+              id="git-logo"
+              data-url="https://github.com/kodehodechristian"
+            ></div>
             <div id="hub">hub</div>
-            <div id="cv-pdf-logo"></div>
+            <div
+              id="cv-pdf-logo"
+              data-url="https://github.com/kodehodechristian/Kodehode-Portfolio-CE/blob/main/CV-Christian.Ernst.pdf"
+            ></div>
           </div>
         </div>
       </section>

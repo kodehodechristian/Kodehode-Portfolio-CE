@@ -73,6 +73,14 @@ html {
   word-spacing: -5px;
 }
 
+.nav-links a {
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.nav-links a:hover {
+  transform: scale(1.1); /* Scale up nav links on hover */
+}
+
 .nav-links ul {
   display: flex;
   justify-content: space-between;
@@ -115,10 +123,6 @@ html {
   transition: width 0.3s;
   bottom: 5px;
   left: 0;
-}
-
-.nav-links ul li a:hover::after {
-  width: 100%;
 }
 
 .nav-links ul li a.active::after {

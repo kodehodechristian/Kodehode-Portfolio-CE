@@ -594,26 +594,27 @@ html {
 
 #project1 {
   background: url("images/4_projects/RPG_initiative.png") no-repeat center /
-    cover;
+    contain;
   cursor: pointer;
   grid-area: 1 / 1 / 2 / 2;
 }
 
 #project2 {
-  background: url("images/4_projects/Bless_you.png") no-repeat center / cover;
+  background: url("images/4_projects/Bless_you.png") no-repeat center / contain;
   cursor: pointer;
   grid-area: 1 / 2 / 2 /3;
 }
 
 #project3 {
-  background: url("images/4_projects/Drum_machine.png") no-repeat center / cover;
+  background: url("images/4_projects/Drum_machine.png") no-repeat center /
+    contain;
   cursor: pointer;
   grid-area: 2 / 1 /3 /2;
 }
 
 #project4 {
   background: url("images/4_projects/The_Cat_&_Mouse_Game.png") no-repeat center /
-    cover;
+    contain;
   cursor: pointer;
   grid-area: 2 / 2 / 3 / 3;
 }
